@@ -1,0 +1,363 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+body{
+  top: 0;
+  margin: 0;
+  height: auto;
+}
+
+header {
+width: 100%;
+  height: 80px;
+}
+
+.header{
+  font-family: 'Poppins';
+  font-size: 20px;
+  font-weight: 600;
+  background-color: #F5EDED;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    align-content: center;
+    gap: 0px;
+  }
+
+.logo {
+  background-image: url('images/premiumrentlogo.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 30px;
+  aspect-ratio: 787 / 274;
+  width: 125px;
+  height: auto;
+  mix-blend-mode: multiply;
+}
+
+.hleft,.hright{
+  width: 15%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.onlineh,
+.phoneh {
+  display: flex;
+  align-items: center;
+  font-size:24px;
+  color: #000;
+  cursor: pointer;
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+
+.phoneh:hover{
+  color: #D72323;
+}
+
+.buttonb {
+  border: 0;
+  width: 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  padding: 0;
+  opacity: 1;
+  transform: scale(0.7);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: 0.175s;
+  margin-left: 20px;
+}
+
+.buttonb:hover {
+  opacity: 1;
+  background: inherit;
+}
+
+.burger {
+  transform: scale(1.85);
+  height: 34px;
+}
+
+.burger svg {
+  height: 36px;
+  transform: translate(-1px, -1px);
+  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.burger .line {
+  fill: none;
+  stroke: #D72323;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.75;
+  transition: stroke-dasharray 500ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.burger .line-top-bottom {
+  stroke-dasharray: 12 63;
+}
+
+.is-closed.burger svg {
+  transform: rotate(-45deg) translate(0);
+}
+
+.is-closed.burger svg .line-top-bottom {
+  stroke-dasharray: 20 300;
+  stroke-dashoffset: -32.42;
+}
+
+
+main {
+  width: 100%;
+  height: 1000px;
+  background-color: #3E3636;
+}
+
+
+
+.landing {
+  background-image: url(images/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: calc(100vh - 80px);
+}
+
+.landingcontent{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.landing-top{
+  width: 100%;
+  height: fit-content;
+}
+
+.title {
+  font-family: 'Poppins', sans-serif;
+  color: #D72323;
+  font-size: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.title::before {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 4px;
+  background-color: #D72323;
+  border-radius: 2px;
+}
+.landing-middle{
+  width: 100%;
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.landing-left, .landing-right{
+  width: 50%;
+  flex-grow: 1;
+  height: 100%;
+}
+
+.car{
+    transform: translateY(-150px);
+    width: 100%;
+    height: 500px;
+    background-image: url('images/audir8-removebg.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.call {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-button {
+  font-family: inherit;
+  font-size: 20px;
+  background: #D72323;
+  color: white;
+  padding: 0.7em 1em;
+  display: inline-flex;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.2s;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.custom-button i {
+  font-size: 24px;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.custom-button span {
+  display: block;
+  margin-left: 0.3em;
+  transition: transform 0.3s ease-in-out;
+}
+
+.custom-button:hover .icon-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+.custom-button:hover i {
+  transform: translateX(2.2em) rotate(45deg) scale(1.1);
+}
+
+.custom-button:hover span {
+  transform: translateX(7em);
+}
+
+.custom-button:active {
+  transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+
+  to {
+    transform: translateY(-0.1em);
+  }
+}
+
+.scroll-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.arrow {
+  position: absolute;
+  width: 2.1rem;
+  height: 0.48rem;
+  opacity: 0;
+  transform: scale(0.3);
+  animation: move-arrow 3s ease-out infinite;
+}
+
+.arrow:first-child {
+  animation: move-arrow 3s ease-out 1s infinite;
+}
+
+.arrow:nth-child(2) {
+  animation: move-arrow 3s ease-out 2s infinite;
+}
+
+.arrow:before,
+.arrow:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  background: #D72323;
+}
+
+.arrow:before {
+  left: 0;
+  transform: skewY(30deg);
+}
+
+.arrow:after {
+  right: 0;
+  width: 50%;
+  transform: skewY(-30deg);
+}
+
+@keyframes move-arrow {
+  25% {
+    opacity: 1;
+  }
+
+  33.3% {
+    opacity: 1;
+    transform: translateY(2.16rem);
+  }
+
+  66.6% {
+    opacity: 1;
+    transform: translateY(3.12rem);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(4.8rem) scale(0.5);
+  }
+}
+
+
+footer {
+  width: 100%;
+  height: 200px;
+  background-color: blue;
+}
+
+@media (max-width:480px) {
+
+  body {
+    width: 100%;
+    height: auto;
+  }
+
+  .title{
+    font-size: 27.5px;
+  }
+
+  .landing-middle{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .car{
+    margin-top: 50px;
+    width:255px;
+  }
+}
