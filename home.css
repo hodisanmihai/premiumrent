@@ -558,6 +558,7 @@ footer {
     .landing-middle {
       display: flex;
       align-items: center;
+      justify-content: center;
       justify-self: center;
       flex-direction: column;
       gap: 100px;
