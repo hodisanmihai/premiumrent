@@ -39,3 +39,9 @@ listItems.forEach(item => {
         document.getElementById('button').querySelector('span').classList.remove('is-closed'); 
     });
 });
+
+const logoLink = document.querySelector('.logo');
+logoLink.addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default anchor click behavior
+    smoothScroll('#landing', 1000); // Smooth scroll to landing section
+});
