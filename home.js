@@ -53,3 +53,25 @@ window.addEventListener('load', function() {
         loadingScreen.style.display = 'none'; 
     }, 1500);
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const reveals = document.querySelectorAll('.reveal');
+
+    function revealOnScroll() {
+        const scrollPos = window.scrollY + window.innerHeight;
+
+        reveals.forEach(reveal => {
+            const elementPos = reveal.getBoundingClientRect().top + window.scrollY;
+
+            if (scrollPos > elementPos + 100) {
+                reveal.classList.add('visible');
+            } else {
+                reveal.classList.remove('visible');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+});

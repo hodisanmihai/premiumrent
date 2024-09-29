@@ -621,6 +621,22 @@ footer {
   justify-content: center;
 }
 
+.reveal {
+  opacity: 0;
+  /* Initially hidden */
+  transform: translateY(50px);
+  /* Move down */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  /* Transition effects */
+}
+
+.reveal.visible {
+  opacity: 1;
+  /* Fully visible */
+  transform: translateY(0);
+  /* Move back to original position */
+}
+
 .footer-content {
   display: flex;
   justify-content: space-between;
