@@ -4,6 +4,7 @@ body{
   top: 0;
   margin: 0;
   height: auto;
+  background-color: #333;
 }
 
 header {
@@ -119,7 +120,7 @@ a{
 
 main {
   width: 100%;
-  height: 1000px;
+  height: auto;
   background-color: #3E3636;
 }
 
@@ -330,34 +331,322 @@ main {
   }
 }
 
+.page{
+  background-color: #F5EDED;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins';
+  flex-direction: column;
+  padding: 40px 0px; 
+}
+
+.services{
+  margin: 20px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.services-title{
+  background-color: #F5EDED;
+  width: 100%;
+  height:auto;
+  font-size: 50px;
+  justify-content: center;
+  text-align: center;
+}
+
+.services-content{
+  background-color: #F5EDED;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center ;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  gap: 50px;
+}
+
+.services-first, .services-three,.services-two {
+  background-color: #F5EDED;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction:row;
+  height: 500px;
+  width:100%;
+}
+
+.services-two{
+  flex-direction: row-reverse;
+}
+
+.first-left, .three-left,.second-left{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 45%;
+  height:90%;
+  background-color: white;
+  border-radius: 16px 0px 0px 16px;
+  box-shadow: 0px 0px 15px;
+}
+
+p{
+  font-size: 30px;
+}
+
+ul{
+  margin-top: 10%;
+}
+
+li{
+  font-size: 20px;
+}
+
+
+.first-right, .three-right, .second-right{
+  background-image: url(images/image1.jpg);
+    background-repeat: no-repeat;
+      background-size:cover;
+      aspect-ratio: 3/2;
+      width:50%;
+      height: 90%;
+      border-radius: 0px 16px 16px 0px;
+      box-shadow: 0px 0px 15px;
+}
+
+.second-right{
+  border-radius: 16px 0px 0px 16px
+}
+
+.second-left{
+  border-radius: 0px 16px 16px 0px;
+}
+
+.schedule-section {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 80%;
+  /* Lățimea maximă crescută pentru a face tabelul mai larg */
+  text-align: center;
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Poppins', sans-serif;
+}
+
+.schedule-table th,
+.schedule-table td {
+  padding: 20px;
+  /* Creștem paddingul pentru a avea celule mai mari */
+  border: 1px solid #D72323;
+}
+
+.schedule-table th {
+  background-color: #D72323;
+  color: white;
+  font-weight: 600;
+}
+
+.schedule-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.schedule-table tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.schedule-table td {
+  color: #333;
+}
 
 footer {
+  font-family: 'Poppins';
+  font-weight: 500;
+  background-color: #333;
+  color: white;
+  padding: 40px 40px;
+  height: 500px;
+  justify-content: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+    width: 100%;
+  flex-wrap: wrap;
+}
+
+.media {
+  flex: 1;
+  text-align: center;
+}
+
+.media p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.media a {
+  color: white;
+  margin-right: 15px;
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+.media a:hover {
+  color: #D72323;
+}
+
+.location {
+  flex: 1;
+  text-align: center;
+}
+
+.map-container {
   width: 100%;
-  height: 200px;
-  background-color: blue;
+  height: 300px;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .location,
+  .media {
+    text-align: center;
+  }
+
+  .map-container {
+    height: 250px;
+  }
 }
 
 @media (max-width:480px) {
 
+  /* Adjust body margins and spacing */
   body {
     width: 100%;
     height: auto;
+    margin: 0;
+    padding: 0;
   }
 
-  .title{
+  /* Title adjustments */
+  .title {
     font-size: 27.5px;
+    text-align: center;
+    padding: 0 10px;
   }
 
-  .landing-middle{
+  /* Landing middle section: stack elements vertically */
+  .landing-middle {
     display: flex;
     align-items: center;
     justify-self: center;
     flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Reduce car image size */
+  .car {
+    margin-top: 30px;
+    width: 100%;
+    max-width: 255px;
+  }
+
+  /* Adjust call button */
+  .call {
+    margin-top: 20px;
+  }
+
+  /* Services section: Make rows stack vertically */
+  .services-first,
+  .services-two,
+  .services-three {
+    flex-direction: column;
+    height: auto;
     gap: 50px;
   }
 
-  .car{
-    margin-top: 50px;
-    width:255px;
+  /* Left section adjustments */
+  .first-left,
+  .second-left,
+  .three-left {
+    width: 70%;
+    height: auto;
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  .first-right,
+  .second-right,
+  .three-right {
+    width: 70%;
+    height: 200px;
+    background-size: cover;
+    border-radius: 16px;
+  }
+
+  .services-content p {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .services-content ul {
+    margin-top: 10px;
+    padding-left: 15px;
+  }
+
+  .services-content li {
+    font-size: 18px;
+  }
+
+  footer {
+    padding: 20px;
+    margin-bottom: 100px;
+    height: auto;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .media,
+  .location {
+    text-align: center;
+  }
+
+  .map-container {
+    height: 250px;
+  }
+
+  /* Schedule table adjustments */
+  .schedule-section {
+    padding: 10px;
+    max-width: 100%;
+  }
+
+  .schedule-table th,
+  .schedule-table td {
+    padding: 10px;
+    font-size: 16px;
   }
 }
