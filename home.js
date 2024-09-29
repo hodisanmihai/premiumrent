@@ -42,6 +42,14 @@ listItems.forEach(item => {
 
 const logoLink = document.querySelector('.logo');
 logoLink.addEventListener('click', function(event) {
-    event.preventDefault(); // Prevent default anchor click behavior
-    smoothScroll('#landing', 1000); // Smooth scroll to landing section
+    event.preventDefault();
+    smoothScroll('#landing', 1000);
+});
+
+window.addEventListener('load', function() {
+    const loadingScreen = document.getElementById('loading-screen');
+
+    setTimeout(() => {
+        loadingScreen.style.display = 'none'; 
+    }, 1500);
 });
