@@ -555,21 +555,20 @@ footer {
   }
 
   /* Landing middle section: stack elements vertically */
-  .landing-middle {
-    display: flex;
-    align-items: center;
-    justify-self: center;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  /* Reduce car image size */
-  .car {
-    margin-top: 30px;
-    width: 100%;
-    max-width: 255px;
-  }
-
+    .landing-middle {
+      display: flex;
+      align-items: center;
+      justify-self: center;
+      flex-direction: column;
+      gap: 100px;
+    }
+  
+    .car {
+      margin-top: 75%;
+      width: 100%;
+      width: 255px;
+      height: 150px;
+    }
   /* Adjust call button */
   .call {
     margin-top: 20px;
